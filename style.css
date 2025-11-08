@@ -1,0 +1,138 @@
+/* 🧠 Thought Matrix Style */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f6f8;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background: #111827;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.logo span {
+  color: #60a5fa;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #60a5fa;
+}
+
+/* HERO SECTION */
+.hero {
+  background: linear-gradient(120deg, #1e3a8a, #3b82f6);
+  color: white;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.hero h1 span {
+  color: #facc15;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  opacity: 0.9;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: #facc15;
+  color: #111827;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #fde047;
+}
+
+/* SECTION CARDS */
+.sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  background: #f9fafb;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+/* FOOTER */
+footer {
+  background: #111827;
+  color: #9ca3af;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #60a5fa;
+  text-decoration: none;
+}
