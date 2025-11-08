@@ -14,16 +14,16 @@
     <div class="logo">🧠 Thought<span>Matrix</span></div>
     <nav>
       <ul>
-        <li><a href="case-studies.html">Case Studies</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="articles.html">Articles</a></li>
-        <li><a href="issues.html">Issues</a></li>
-        <li><a href="opinions.html">Opinions</a></li>
+        <li><a href="#case">Case Studies</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#articles">Articles</a></li>
+        <li><a href="#issues">Issues</a></li>
+        <li><a href="#opinions">Opinions</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <section class="hero">
     <div class="overlay"></div>
     <div class="hero-content">
@@ -33,35 +33,133 @@
     </div>
   </section>
 
-  <!-- SECTIONS -->
+  <!-- SECTION CARDS -->
   <section id="sections" class="sections">
-    <div class="card" onclick="window.location.href='case-studies.html'">
+    <div class="card" onclick="openModal('case')">
       <div class="icon">📊</div>
       <h2>Case Studies</h2>
-      <p>Real-world challenges analyzed through data, insight, and innovation.</p>
+      <p>Real-world challenges analyzed through data and insight.</p>
     </div>
 
-    <div class="card" onclick="window.location.href='research.html'">
+    <div class="card" onclick="openModal('research')">
       <div class="icon">🔬</div>
       <h2>Research</h2>
-      <p>Dive deep into evidence-based discoveries and analytical explorations.</p>
+      <p>Dive into evidence-based discoveries and analytical explorations.</p>
     </div>
 
-    <div class="card" onclick="window.location.href='articles.html'">
+    <div class="card" onclick="openModal('articles')">
       <div class="icon">📰</div>
       <h2>Articles</h2>
       <p>Readable thoughts and perspectives on trending and timeless topics.</p>
     </div>
 
-    <div class="card" onclick="window.location.href='issues.html'">
+    <div class="card" onclick="openModal('issues')">
       <div class="icon">⚠️</div>
       <h2>Alarming Issues</h2>
-      <p>Awareness on critical matters that shape our shared future.</p>
+      <p>Awareness on critical matters shaping our shared future.</p>
     </div>
 
-    <div class="card" onclick="window.location.href='opinions.html'">
+    <div class="card" onclick="openModal('opinions')">
       <div class="icon">💭</div>
       <h2>Opinions</h2>
       <p>Authentic reflections that challenge, question, and inspire.</p>
     </div>
-  </s
+  </section>
+
+  <!-- POPUP MODALS -->
+  <div id="case" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('case')">&times;</span>
+      <h2>Case Studies</h2>
+      <div class="work">
+        <h3>🌍 Urban Sustainability</h3>
+        <p>Exploring how smart city models reduce waste and improve energy use.</p>
+        <h3>🤖 AI in Education</h3>
+        <p>Analyzing AI tools and their impact on modern learning environments.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="research" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('research')">&times;</span>
+      <h2>Research</h2>
+      <div class="work">
+        <h3>🧬 Genetic Algorithms for Problem Solving</h3>
+        <p>A computational approach to optimization using bio-inspired algorithms.</p>
+        <h3>📈 Social Media and Youth Psychology</h3>
+        <p>Investigating behavioral patterns and emotional impact among Gen-Z users.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="articles" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('articles')">&times;</span>
+      <h2>Articles</h2>
+      <div class="work">
+        <h3>💡 Creativity in the Age of AI</h3>
+        <p>Can machines inspire original thought, or do they simply imitate?</p>
+        <h3>🌐 The Future of Remote Work</h3>
+        <p>Why hybrid systems are redefining productivity and balance.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="issues" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('issues')">&times;</span>
+      <h2>Alarming Issues</h2>
+      <div class="work">
+        <h3>🔥 Climate Crisis 2025</h3>
+        <p>Urgent action and global responsibility toward sustainability.</p>
+        <h3>🧠 Mental Health in Digital Spaces</h3>
+        <p>How technology influences mental well-being and connection.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="opinions" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('opinions')">&times;</span>
+      <h2>Opinions</h2>
+      <div class="work">
+        <h3>🚀 The Power of Curiosity</h3>
+        <p>Why questioning everything leads to innovation and understanding.</p>
+        <h3>🕊️ Reimagining Success</h3>
+        <p>Shifting from competition to collaboration in modern society.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Thought Matrix | Designed by Vidhi Bhaskar</p>
+    <p>📧 <a href="mailto:bhaskarvidhi12@gmail.com">bhaskarvidhi12@gmail.com</a></p>
+  </footer>
+
+  <script>
+    // Smooth Scroll
+    document.querySelector('.btn').addEventListener('click', (e) => {
+      e.preventDefault();
+      document.querySelector('#sections').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Modal functions
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+
+    // Close modal on outside click
+    window.onclick = function (event) {
+      document.querySelectorAll('.modal').forEach(modal => {
+        if (event.target === modal) modal.style.display = 'none';
+      });
+    }
+  </script>
+</body>
+</html>
